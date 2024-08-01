@@ -1,4 +1,7 @@
 from django.http import HttpResponse
+from django.views import generic
+from .models import Post
 
-def home(request):
-    return HttpResponse("Hello, Blog!")
+class PostList(generic.ListView):
+    queryset = Post.objects.filter(status=1)
+    template_name = "post_list.html"
