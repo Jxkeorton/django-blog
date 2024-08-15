@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from .models import About
-from django.shortcuts import render, get_object_or_404
 
 def about_me(request):
     """
